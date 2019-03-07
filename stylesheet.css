@@ -1,25 +1,24 @@
 body{
-    margin-bottom: 0;
+    margin:0;
     padding: 0;
     font-family: sans-serif;
+
 }
 
 
 /*****************************************************************************************************************
-***************************************                          ************************************************* 
+***************************************                          *************************************************
 ***************************************          Nav Bar         *************************************************
 *****************************************************************************************************************/
 /* Nav bar Selection*/
 .navbar {
   overflow: hidden;
   width:100%;
-  height:82px;
-  line-height: 80px;
+  height:80px;
+  line-height: 60px;
   position: fixed; /* Set the navbar to fixed position */
-  background: rgba(0,0,0,.10);
+  background:#0009;
   z-index: 300;
-  margin: 0;
-  padding: 0;
   text-align: center;
 }
 
@@ -29,7 +28,6 @@ body{
 .navbar ul{
     float: right; /*aligns nav bar to the right*/
     margin-right: 30px;/*spaces the words*/
-    margin-top: 0;
 
 
 }
@@ -40,7 +38,6 @@ body{
 }
 
 .navbar ul li{
-      list-style-type: none;
       display:inline-block; /*aligns list horizontally*/
       transition: 0.4s all; /*all lists transition*/
       width:100px;
@@ -57,7 +54,6 @@ body{
   color: #f1f1f1;
   font-size: 20px;
   font-weight: bolder;
-  padding: 20px;
   /*gave each word padding and colored
  characters white*/
 }
@@ -65,7 +61,7 @@ body{
 
 
 /*****************************************************************************************************************
-***************************************                          ************************************************* 
+***************************************                          *************************************************
 ***************************************          SLIDESHOW       *************************************************
 *****************************************************************************************************************/
 /* Slider*/
@@ -147,40 +143,40 @@ body{
     0%{
         left: 0;
     }
-    
+
     20%{
         left: 0;
     }
-    
+
     25%{
         left: -100%;
     }
-    
+
     45%{
         left: -100%;
     }
-    
+
     50%{
         left: -200%;
     }
-    
+
     70%{
         left: -200%;
     }
-    
+
     75%{
         left: -300%;
     }
-    
+
     95%{
         left: -300%;
     }
-    
+
     100%{
         left: -400;
     }
-    
-    
+
+
 }
 @media (max-width: 768px){
         .container .slider .slide .caption{
@@ -188,7 +184,7 @@ body{
         left: 20px;
         right: 20px;
         padding: 20px;
-        
+
     }
 
     .container .slider .slide .caption h2{
@@ -197,14 +193,14 @@ body{
     }
 
     .container .slider .slide .caption p{
-        
+
         font-size: 16px;
     }
 }
 
 
 /*****************************************************************************************************************
-***************************************                          ************************************************* 
+***************************************                          *************************************************
 ***************************************          Parralax        *************************************************
 *****************************************************************************************************************/
 
@@ -230,16 +226,23 @@ body{
 
 .pimg3{
   background-image:url("images/image3.jpg");
-  min-height:400px;
+  min-height:700px;
 }
 
 .column {
   float: left;
-  height: 400px;
+  height: 300px;
   width: 50%;
 }
 
-/* Clear floats after the columns */
+.column2 {
+  box-sizing: border-box;
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px;
+}
+
 .row:after {
   content: "";
   display: table;
@@ -286,7 +289,7 @@ body{
 
 
 /*****************************************************************************************************************
-***************************************                          ************************************************* 
+***************************************                          *************************************************
 ***************************************          Side Tags       *************************************************
 *****************************************************************************************************************/
 .side{
@@ -317,22 +320,18 @@ body{
 
 
 /*****************************************************************************************************************
-***************************************                          ************************************************* 
+***************************************                          *************************************************
 ***************************************          FOOTER          *************************************************
 *****************************************************************************************************************/
 /* Footer section */
-#footer {
-    background-color: sandybrown;
-    
-   
-}
 
 
 @media (max-width: 600px) {
 
-    
+
   .box ul {
     transform: scale(0.6);
+
   }
 }
 
@@ -342,9 +341,10 @@ body{
   }
 }
 
-@media (min-width: 701px) and (max-width: 800px) {
-
-  .box ul {
+@media (min-width: 701px) and (max-width: 800px)
+{
+  .box ul
+  {
     transform: scale(0.8);
   }
 }
@@ -352,9 +352,13 @@ body{
 .box ul {
   margin: 0;
   padding: 0;
+  margin-top: 30px;
   list-style: none;
   display: flex;
-background-attachment: fixed;    
+  background-attachment: fixed;
+  padding-left:16em;
+  padding-right: 16em;
+
 }
 
 .box ul li {
@@ -378,6 +382,7 @@ background-attachment: fixed;
   transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0,0);
   transition: 0.5s;
   box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+
 }
 
 .box ul li a::before {
@@ -474,9 +479,9 @@ background-attachment: fixed;
 }
 .footer-bottom{
     width: 100%;
-    margin:  0px;
-    background: white;
-    padding: px;
+    margin:0px;
+    color: black;
     text-align: center;
     line-height: 5vh;
+    margin-top: 50px;
 }
