@@ -110,21 +110,24 @@
             
                             global $links;
                             global $titles;
+                       
                                 
                             $links[$c] = $post->thread->site;
                             $titles[$c] = $post->title;
                             
                             if ($post->thread->main_image == null) {
-                                global $images;
+                                  global $images;
+                               $images[$c]='images/default.jpg';
                             
                             } else {
                                 
                                 if ($post->thread->main_image == 'http://www.techskimm.com/wp-content/plugins/wp-rss-multi-importer/images/facebook.png') {
+                                      global $images;
                                     $images[$c] = 'images/default.jpg';
                                     
                                 } else {
                                     
-                                    GLOBAL $images;
+                                    global $images;
                                     $images[$c] = $post->thread->main_image;
                                 }
                             }
@@ -136,11 +139,31 @@
                                 break 1;
                             }
                         }
+                            
+                           for($c=0; $c<3; $c++){
+                                  global $images;
+                               
+                            if ($images[$c] == null) {
+                        
+                            $images[$c]='images/default.jpg';   
+                            
+                            }}
+                            
+                                
+                           for($c=0; $c<3; $c++){
+                                  global $titles;
+                               
+                            if ($titles[$c] == null) {
+                        
+                            $titles[$c]='Technology News';   
+                            
+                            }}
+                            
                     }
                 }
 
                 $params = array(
-                    "q" => "language:english site:wired.com",
+                    "q" => "language:english site:cnet.com",
                     "sort" => "relevancy"
                 );
                 
@@ -156,17 +179,17 @@
      <section class="section section-dark">
         <div class="row">
         <div class="column2"> 
-        <h2><?php echo $titles[0]; ?></h2>  
-        <?php  echo "<img src='" . $images[0] . "'  width='100%' height='80%' class='imageleft'/>"; ?>
+        <h3><?php echo $titles[0]; ?></h3>  
+        <?php  echo "<img src='" . $images[0] . "'  width='100%' height='190px' class='imageleft'/>"; ?>
         </div>
       <div class="column2">
-        <h2><?php echo $titles[1]; ?></h2>
+        <h3><?php echo $titles[1]; ?></h3>
       
-         <?php  echo "<img src='" . $images[1] . "'width='100%' height='80%' ' class='imageleft'/>"; ?>  
+         <?php  echo "<img src='" . $images[1] . "'width='100%' height='190px' ' class='imageleft'/>"; ?>  
       </div>
       <div class="column2">
-        <h2><?php echo $titles[2]; ?></h2>
-        <?php  echo "<img src='" . $images[2] . "' width='100%' height='80%'  class='imageleft'/>"; ?>    
+        <h3><?php echo $titles[2]; ?></h3>
+        <?php  echo "<img src='" . $images[2] . "' width='100%' height='190px'  class='imageleft'/>"; ?>    
       </div>
     </div>
 
